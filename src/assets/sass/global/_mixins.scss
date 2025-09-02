@@ -3,10 +3,10 @@
 //=====================================
 //    変数
 //=====================================
-$pc_camp: 1240; //pcカンプの幅
-$sp_camp: 375; //spカンプの幅
+$pc_camp: 1366; //pcカンプの幅
+$sp_camp: 320; //spカンプの幅
 $breakpoint: 768;
-$pc-inner-sum: 1080;
+$pc-inner-sum: 1266;
 
 $breakpoints: (
   'sm-down': "screen and (max-width: 599px)",  // 600px未満を追加

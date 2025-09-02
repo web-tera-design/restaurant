@@ -1,0 +1,66 @@
+@use "../global" as *;
+
+.l-header {
+    background-color: $color-rd;
+}
+
+.l-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.l-header__logo {
+
+}
+
+.l-header__nav {
+    display: flex;
+    @include mq('sp-down') {
+      display: none;
+    }
+}
+
+.l-header__list {
+display: flex;
+    gap: rm(34);
+align-items: center;
+justify-content: center;
+}
+
+.l-header__item {
+
+}
+
+.l-header__link {
+    color: $color-wt;
+    font-family: $font-sub;
+    font-size: rm(15);
+    font-weight: 400;
+}
+
+.l-header__cta {
+    margin-inline-start: rm(46);
+    padding-block: rm(10);
+}
+
+.l-header__cta-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: rm(19);
+    color: $color-wt;
+    font-size: rm(18);
+    font-weight: 900;
+    border-radius: rm(5);
+    background: #005DA2;
+    padding: rm(14) rm(29.36) rm(19) rm(42);
+    
+    svg {
+        position: relative;
+        inset-block-start: rm(2);
+        inline-size: rm(13);
+        block-size: rm(13);
+    }
+}
+
