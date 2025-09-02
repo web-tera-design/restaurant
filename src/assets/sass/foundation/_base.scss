@@ -3,9 +3,8 @@
 body {
     font-family: $font-main;
     color: $color-bk;
-    background-color: $color-wt;
-    line-height: 150%;
-    letter-spacing: 1px;
+    background-color: $color-back-ground;
+    line-height: normal;
   }
 
   body.is-fixed {
