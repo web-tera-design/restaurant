@@ -116,3 +116,100 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+window.addEventListener("load", () => {
+  const leads = document.querySelectorAll(".p-voice__lead");
+  if (!leads.length) return;
+
+  // いったん高さリセット（リサイズ時用）
+  leads.forEach((el) => (el.style.height = ""));
+
+  // 最大値を取得
+  let maxHeight = 0;
+  leads.forEach((el) => {
+    maxHeight = Math.max(maxHeight, el.offsetHeight);
+  });
+
+  // 最大値でそろえる
+  leads.forEach((el) => {
+    el.style.height = maxHeight + "px";
+  });
+});
+
+// リサイズ対応
+window.addEventListener("resize", () => {
+  const leads = document.querySelectorAll(".p-voice__lead");
+  leads.forEach((el) => (el.style.height = "")); // リセット
+  let maxHeight = 0;
+  leads.forEach((el) => {
+    maxHeight = Math.max(maxHeight, el.offsetHeight);
+  });
+  leads.forEach((el) => {
+    el.style.height = maxHeight + "px";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  setUpAccordion();
+});
+
+const setUpAccordion = () => {
+  const details = document.querySelectorAll(".js-details");
+  const IS_OPENED_CLASS = "is-opened";
+
+  details.forEach((element) => {
+    const summary = element.querySelector(".js-summary");
+    const content = element.querySelector(".js-content");
+
+    summary.addEventListener("click", (event) => {
+      // デフォルトの挙動を無効化
+      event.preventDefault();
+
+      if (element.classList.contains(IS_OPENED_CLASS)) {
+        // 既に開かれている状態を閉じる
+        closingAnim(content, element)
+          .eventCallback("onComplete", () => {
+            element.classList.remove(IS_OPENED_CLASS);
+            element.removeAttribute("open");
+          })
+          .restart();
+      } else {
+        // 開く処理
+        element.classList.add(IS_OPENED_CLASS);
+        element.setAttribute("open", "true");
+        openingAnim(content).restart();
+      }
+    });
+  });
+};
+
+/**
+ * アコーディオンを閉じる時のアニメーション
+ */
+const closingAnim = (content, element) =>
+  gsap.to(content, {
+    height: 0,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power3.out",
+    overwrite: true,
+  });
+
+/**
+ * アコーディオンを開く時のアニメーション
+ */
+const openingAnim = (content) =>
+  gsap.fromTo(
+    content,
+    {
+      height: 0,
+      opacity: 0,
+    },
+    {
+      height: "auto",
+      opacity: 1,
+      duration: 0.5,
+      ease: "power3.out",
+      overwrite: true,
+    }
+  );

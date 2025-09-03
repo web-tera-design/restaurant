@@ -1,0 +1,78 @@
+@use "../global" as *;
+
+summary {
+  display: block;
+  
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  @media(any-hover: hover) {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+// /* その他 見栄えを整えるためのもの */
+// .item {
+//   padding-block: 20px;
+//   border-bottom: 1px solid #000;
+// }
+
+
+// .content {
+//   padding-top: 12px;
+// }
+
+.p-faq {
+
+}
+
+.p-faq__inner {
+inline-size: min(1366px, 100%);
+margin-inline: auto;
+padding-inline: rm(120);
+}
+
+.p-faq__heading {
+
+}
+
+.p-faq__heading-title {
+
+}
+
+.p-faq__list {
+display: flex;
+flex-direction: column;
+gap: rm(10);
+}
+
+.js-details {
+
+}
+
+.p-faq__item {
+
+}
+
+.p-faq__question {
+    display: inline-block;
+font-size: rm(25);
+font-weight: 900;
+background-color: #fff;
+inline-size: 100%;
+border-radius: 100vmax;
+padding: rm(35) rm(197) rm(34) rm(198);
+transition: opacity 0.3s ease;
+}
+
+.p-faq__answer {
+    display: inline-block;
+    font-size: rm(20);
+    font-weight: 900;
+    line-height: 25px; /* 166.667% */
+    padding: rm(30) rm(80) rm(30) rm(156);
+}
+

@@ -1,0 +1,15 @@
+@use "../global" as *;
+
+.c-button {
+    text-align: center;
+    color: $color-wt;
+    font-size: rm(15);
+    font-weight: 900;
+    padding: rm(16) rm(34) rm(16) rm(83);
+    border-radius: 100px;
+    background: #005DA2;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: rm(39);
+}

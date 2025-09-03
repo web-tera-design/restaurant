@@ -1,13 +1,16 @@
 @use "../global" as *;
 
 .l-header {
-    background-color: $color-rd;
+    inline-size: min(1366px, 100%);
+    margin-inline: auto;
 }
 
 .l-header__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-inline: rm(50);
+    background-color: $color-rd;
 }
 
 .l-header__logo {
@@ -55,7 +58,7 @@ justify-content: center;
     border-radius: rm(5);
     background: #005DA2;
     padding: rm(14) rm(29.36) rm(19) rm(42);
-    
+
     svg {
         position: relative;
         inset-block-start: rm(2);

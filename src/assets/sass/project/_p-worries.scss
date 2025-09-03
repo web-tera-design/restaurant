@@ -1,0 +1,124 @@
+@use "../global" as *;
+
+.p-worries {
+    padding-block: rm(120) rm(137);
+}
+
+.p-worries__inner {
+
+}
+
+.p-worries__heading {
+
+}
+
+.p-worries__subtitle {
+color: #FAF3EB;
+background: #F56E28;
+inline-size: fit-content;
+border-radius: 100vmax;
+padding: rm(6) rm(19) rm(3) rm(20);
+margin-inline: auto;
+font-family: "Alfa Slab One";
+font-size: rm(15);
+font-weight: 400;
+}
+
+.p-worries__title {
+font-size: rm(35);
+font-weight: 900;
+margin-block-start: rm(10);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.p-worries__list-inner {
+    inline-size: min(1366px, 100%);
+    margin-inline: auto;
+    padding-inline: rm(120);
+}
+
+.p-worries__list {
+    margin-block-start: rm(68);
+display: flex;
+gap: rm(8);
+}
+
+.p-worries__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: rm(45) rm(42) rm(34) rm(42);
+inline-size: 100%;
+border-radius: 10px;
+background: #FFF;
+}
+
+.p-worries__label {
+    position: absolute;
+    top: rm(-20);
+    left: 50%;
+    translate: -50%;
+
+color: #FAF3EB;
+font-family: "Alfa Slab One";
+font-size: rm(15);
+font-weight: 400;
+letter-spacing: 0.45px;
+padding: rm(10) rm(16) rm(9) rm(16);
+background-color: #005da2;
+border-radius: 100vmax;
+}
+
+.p-worries__item-body {
+
+}
+
+.p-worries__item-title {
+    text-align: center;
+
+color: #005DA2;
+font-size: rm(20);
+font-weight: 900;
+letter-spacing: 0.6px;
+}
+
+.p-worries__image {
+margin-block-start: rm(29);
+inline-size: rm(160);
+margin-inline: auto;
+img {
+    inline-size: 100%;;
+    height: 100%;
+    aspect-ratio: 1;
+}
+}
+
+.p-worries__content {
+margin-block-start: rm(22);
+display: flex;
+flex-direction: column;
+gap: rm(15);
+
+}
+
+.p-worries__lead {
+    position: relative;
+    display: inline-block;
+font-size: rm(15);
+font-weight: 900;
+letter-spacing: 0.45px;
+
+&::before {
+  content: '・';
+  position: absolute;
+  top: rm(-28);
+  left: rm(-40);
+  font-size: rm(50);
+;
+}
+}
+

@@ -3,10 +3,10 @@
 .c-drawer-icon {
     position: fixed;
     z-index: 102;
-    top: rm(10);
+    top: rm(8);
     right: 24px;
-    width: 24px;
-    height: 10px;
+    inline-size: 24px;
+    block-size: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -38,18 +38,18 @@
       translate: 0 -4px;
     }
 
-    &::after {
-        position: absolute;
-        bottom: -25px;
-        left: 50%;
-        translate: -50%;
-        content: "CLOSE";
-        color: #0A2647;
-        // font-family: $font-en;
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 150%; /* 18px */
-    }
+    // &::after {
+    //     position: absolute;
+    //     bottom: -25px;
+    //     left: 50%;
+    //     translate: -50%;
+    //     content: "CLOSE";
+    //     color: #0A2647;
+    //     // font-family: $font-en;
+    //     font-size: 12px;
+    //     font-weight: 500;
+    //     line-height: 150%; /* 18px */
+    // }
 
     // .c-drawer-icon__text {
     //     display: block;
@@ -223,10 +223,10 @@
     padding: rm(14) rm(29.36) rm(19) rm(42);
 
     svg {
-      display: block;
-
-      inline-size: rm(13);
-      block-size: rm(13);
+        position: relative;
+        inset-block-start: rm(2);
+        inline-size: rm(13);
+        block-size: rm(13);
     }
 }
 

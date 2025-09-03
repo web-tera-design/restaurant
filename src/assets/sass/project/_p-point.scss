@@ -1,0 +1,71 @@
+@use "../global" as *;
+
+.p-point {
+
+}
+
+.p-point__inner {
+    inline-size: min(1366px, 100%);
+    padding-inline: rm(50);
+    margin-inline: auto;
+    padding-block: rm(115) rm(131);
+}
+
+.p-point__heading-title {
+
+}
+
+.p-point__list-wrapper {
+margin-block-start: rm(90);
+}
+
+.p-point__list {
+display: flex;
+gap: rm(17);
+}
+
+.p-point__item {
+inline-size: rm(625);
+padding: rm(64) rm(51) rm(45) rm(88);
+position: relative;
+}
+
+.p-point__item--orange {
+    background: rgba(245, 110, 40, 0.10);
+}
+
+.p-point__item--blue {
+background: rgba(0, 93, 162, 0.10);
+}
+
+.p-point__label {
+    position: absolute;
+    top: rm(-20);
+    left: 50%;
+    translate: -50%;
+    inline-size: fit-content;
+    padding: rm(8) rm(42);
+color: #FAF3EB;
+font-size: rm(18);
+font-weight: 900;
+line-height: 25px; /* 138.889% */
+border-radius: 100vmax;
+background: #F56E28;
+}
+
+.p-point__card-list {
+display: flex;
+flex-direction: column;
+gap: rm(20);
+}
+
+.p-point__card-item {
+color: #000;
+font-size: rm(18);
+font-weight: 900;
+}
+
+.p-point__card-text {
+
+}
+

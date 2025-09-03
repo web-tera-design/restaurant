@@ -1,0 +1,97 @@
+@use "../global" as *;
+
+.p-mv {
+
+}
+
+.p-mv__inner {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.p-mv__image {
+    inline-size: 100%;
+    @include mq('tab-up') {
+      inline-size: rm(668);
+    }
+
+    img {
+        inline-size: 100%;
+        block-size: 100%;
+        aspect-ratio: 668 / 585;
+    }
+}
+
+.p-mv__content {
+    margin-block-start: rm(27);
+    @include mq('sp-down') {
+      margin-block-start: 0;
+    }
+}
+
+.p-mv__content__inner {
+    padding-inline: rm(50);
+}
+
+.p-mv__heading {
+    color: $color-wt;
+    font-size: rm(20);
+    font-weight: 900;
+    background-color: $color-rd;
+    inline-size:fit-content;
+    padding: rm(6) rm(6) rm(6) rm(17);
+
+    @include mq('sp-down') {
+      font-size: rm(10);
+    }
+}
+
+.p-mv__title {
+
+}
+
+.p-mv__title-lead {
+    background-color: $color-rd;
+    color: $color-wt;
+    font-size: rm(68);
+    font-weight: 900;
+    line-height: 160.294%; /* 160.294% */
+    letter-spacing: -3.4px;
+
+    @include mq('sp-down') {
+      font-size: rm(30);
+    }
+}
+
+.p-mv__read-list {
+    position: relative;
+    margin-block-start: rm(-90);
+    inset-inline-start: rm(248);
+}
+
+.p-mv__read-item {
+    font-size: rm(15);
+    font-weight: 900;
+}
+
+.p-mv__button-wrapper {
+    margin-block-start: rm(50);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: rm(9);
+}
+
+.p-mv__button-heading {
+    font-size: rm(20);
+    font-weight: 900;
+}
+
+.p-mv__buttons {
+    display: flex;
+    gap: rm(7);
+}
+
+
+

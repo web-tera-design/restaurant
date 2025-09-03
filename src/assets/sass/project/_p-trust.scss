@@ -1,0 +1,62 @@
+@use "../global" as *;
+
+.p-trust {
+
+}
+
+.p-trust__inner {
+padding-inline: rm(121);
+padding-block: rm(100) rm(105);
+margin-inline: auto;
+}
+
+.p-trust__title {
+    font-size: rm(35);
+font-weight: 900;
+}
+
+.p-trust__list {
+margin-block-start: rm(31);
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: auto auto;
+gap: rm(10);
+text-align: center;
+}
+
+.p-trust__item {
+    inline-size: rm(368);
+    background-color: #fff;
+}
+
+.trust--1 {
+    
+}
+
+.p-trust__text {
+    display: inline-block;
+    padding-block: rm(21);
+    font-size: rm(20);
+font-weight: 900;
+}
+
+.trust--2 {
+
+}
+
+.trust--3 {
+
+}
+
+.trust--4 {
+
+}
+
+.trust--5 {
+
+}
+
+.trust--6 {
+
+}
+

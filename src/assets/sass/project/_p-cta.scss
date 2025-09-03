@@ -1,0 +1,133 @@
+@use "../global" as *;
+
+.p-cta {
+    inline-size: min(1366px, 100%);
+    padding-inline: rm(50);
+
+}
+
+.p-cta__inner {
+    padding: rm(54) rm(140) rm(46) rm(140);
+margin-inline: auto;
+text-align: center;
+background-color: $color-rd;
+color: $color-wt;
+border-radius: 10px;
+}
+
+.p-cta__heading {
+color: #FAF3EB;
+font-size: rm(35);
+font-weight: 900;
+letter-spacing: 1.05px;
+}
+
+.p-cta__lead {
+color: #FAF3EB;
+font-size: rm(20);
+font-weight: 700;
+letter-spacing: 0.6px;
+margin-block-start: rm(13);
+}
+
+.p-cta__button-wrapper {
+margin-block-start: rm(40);
+gap: rm(13);
+}
+
+.p-cta__button-heading {
+color: #FAF3EB;
+font-size: rm(25);
+font-weight: 900;
+letter-spacing: 1.25px;
+margin-block-end: rm(13);
+}
+
+.p-cta__button-heading--second {
+    color: #FAF3EB;
+    font-size: rm(20);
+font-weight: 900;
+}
+
+.p-cta__button {
+color: #FAF3EB;
+font-size: rm(30);
+font-size: 30px;
+font-weight: 900;
+    padding: rm(16) rm(34) rm(16) rm(83);
+    border-radius: 100px;
+    background: #005DA2;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: rm(39);
+    svg {
+        position: relative;
+        inline-size: rm(18);
+        block-size: rm(18);
+        top: rm(4);
+    }
+}
+
+.p-cta__button-text-wrapper {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.p-cta__button-top {
+color: #FAF3EB;
+font-size: rm(20);
+font-weight: 900;
+}
+
+.p-cta__button-rowe {
+color: #FAF3EB;
+font-size: rm(30);
+font-weight: 900;
+}
+
+.p-cta__text {
+    color: #FAF3EB;
+    font-size: rm(25);
+font-weight: 900;
+}
+
+.p-cta__subtext {
+color: #FAF3EB;
+font-size: rm(16);
+font-weight: 700;
+}
+
+
+.p-cta--second {
+    position: relative;
+    margin-block-start: rm(147);
+}
+
+.p-cta__inner--second {
+    padding-block-start: rm(80);
+}
+
+.p-cta__bg {
+    color: #F56E28;
+    font-size: rm(50);
+    font-weight: 900;
+    position: absolute;
+    z-index: 2;
+    background: url(../img/cta-polygon.svg) no-repeat center center / cover;
+    top: rm(-60);
+    left: 50%;
+    translate: -50%;
+    inline-size: rm(110);
+    block-size: rm(110);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        inline-size: 100%;
+        block-size: 100%;
+        aspect-ratio: 1;
+    }
+}
