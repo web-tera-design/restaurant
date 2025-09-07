@@ -9,6 +9,10 @@
     padding-inline: rm(50);
     margin-inline: auto;
     padding-block: rm(115) rm(131);
+    @include mq('sp-down') {
+        padding-inline: rm(20);
+        padding-block: rm(80) rm(91);
+    }
 }
 
 .p-point__heading-title {
@@ -17,17 +21,28 @@
 
 .p-point__list-wrapper {
 margin-block-start: rm(90);
+@include mq('sp-down') {
+  margin-block-start: rm(63);
+}
 }
 
 .p-point__list {
 display: flex;
 gap: rm(17);
+@include mq('sp-down') {
+  flex-direction: column;
+  gap: rm(40);
+}
 }
 
 .p-point__item {
 inline-size: rm(625);
-padding: rm(64) rm(51) rm(45) rm(88);
+padding: rm(64) rm(38) rm(45) rm(55);
 position: relative;
+@include mq('sp-down') {
+  inline-size: 100%;
+  padding: rm(20);
+}
 }
 
 .p-point__item--orange {
@@ -48,22 +63,51 @@ background: rgba(0, 93, 162, 0.10);
 color: #FAF3EB;
 font-size: rm(18);
 font-weight: 900;
-line-height: 25px; /* 138.889% */
+line-height: 138.889%; /* 138.889% */
 border-radius: 100vmax;
 background: #F56E28;
+@include mq('sp-down') {
+  padding: rm(5) rm(16);
+  font-size: rm(12);
+  top: rm(-14);
+}
+
 }
 
 .p-point__card-list {
 display: flex;
 flex-direction: column;
 gap: rm(20);
+@include mq('sp-down') {
+  gap: rm(14);
+}
 }
 
 .p-point__card-item {
+    display: flex;
+    gap: rm(17);
 color: #000;
 font-size: rm(18);
 font-weight: 900;
+@include mq('sp-down') {
+  gap: rm(12);
+  font-size: rm(12);
 }
+}
+
+.p-point__card-label {
+    position: relative;
+    top: rm(4);
+background: url(../img/point-rd.svg) no-repeat center center / cover;
+inline-size: rm(20);
+block-size: rm(20);
+@include mq('sp-down') {
+  inline-size: rm(10);
+  block-size: rm(10);
+  top: rm(3);
+}
+}
+
 
 .p-point__card-text {
 

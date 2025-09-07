@@ -3,7 +3,10 @@
 .p-cta {
     inline-size: min(1366px, 100%);
     padding-inline: rm(50);
-
+    
+    @include mq('sp-down') {
+      padding-inline: rm(35);
+    }
 }
 
 .p-cta__inner {
@@ -12,7 +15,10 @@ margin-inline: auto;
 text-align: center;
 background-color: $color-rd;
 color: $color-wt;
-border-radius: 10px;
+border-radius: rm(10);
+@include mq('sp-down') {
+  padding: rm(10) rm(20);
+}
 }
 
 .p-cta__heading {
@@ -20,6 +26,9 @@ color: #FAF3EB;
 font-size: rm(35);
 font-weight: 900;
 letter-spacing: 1.05px;
+@include mq('sp-down') {
+  font-size: rm(24);
+}
 }
 
 .p-cta__lead {
@@ -28,11 +37,19 @@ font-size: rm(20);
 font-weight: 700;
 letter-spacing: 0.6px;
 margin-block-start: rm(13);
+@include mq('sp-down') {
+  font-size: rm(14);
+  margin-block-start: rm(9);
+}
 }
 
 .p-cta__button-wrapper {
 margin-block-start: rm(40);
 gap: rm(13);
+@include mq('sp-down') {
+  margin-block-start: rm(28);
+  gap: rm(9);
+}
 }
 
 .p-cta__button-heading {
@@ -41,18 +58,24 @@ font-size: rm(25);
 font-weight: 900;
 letter-spacing: 1.25px;
 margin-block-end: rm(13);
+@include mq('sp-down') {
+    font-size: rm(17);
+    margin-block-end: rm(9);
+}
 }
 
 .p-cta__button-heading--second {
     color: #FAF3EB;
     font-size: rm(20);
 font-weight: 900;
+@include mq('sp-down') {
+  font-size: rm(14);
+}
 }
 
 .p-cta__button {
 color: #FAF3EB;
 font-size: rm(30);
-font-size: 30px;
 font-weight: 900;
     padding: rm(16) rm(34) rm(16) rm(83);
     border-radius: 100px;
@@ -61,11 +84,48 @@ font-weight: 900;
     justify-content: center;
     align-items: center;
     gap: rm(39);
+    transition: all 0.3s ease;
+    @include mq('sp-down') {
+      padding: rm(11) rm(20) rm(11) rm(40);
+      gap: rm(27);
+      font-size: rm(14);
+    }
+
     svg {
         position: relative;
         inline-size: rm(18);
         block-size: rm(18);
         top: rm(4);
+        @include mq('sp-down') {
+            inline-size: rm(12);
+            block-size: rm(12);
+        }
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        background: $color-rd;
+        color:#005DA2;
+        .p-cta__text {
+            color:#005DA2;
+        }
+        .p-cta__subtext {
+            color:#005DA2;
+        }
+      }
+    }
+}
+
+.p-cta__button--button2 {
+    inline-size: rm(665);
+    background: $color-rd;
+    transition: background 0.3s ease;
+    @include mq('sp-down') {
+      inline-size: 100%;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        background:#005DA2;
+      }
     }
 }
 
@@ -80,12 +140,18 @@ align-items: center;
 color: #FAF3EB;
 font-size: rm(20);
 font-weight: 900;
+@include mq('sp-down') {
+  font-size: rm(12);
+}
 }
 
 .p-cta__button-rowe {
 color: #FAF3EB;
 font-size: rm(30);
 font-weight: 900;
+@include mq('sp-down') {
+    font-size: rm(21);
+}
 }
 
 .p-cta__text {
@@ -95,6 +161,8 @@ font-weight: 900;
 }
 
 .p-cta__subtext {
+    display: block;
+    margin-block-start: rm(11);
 color: #FAF3EB;
 font-size: rm(16);
 font-weight: 700;

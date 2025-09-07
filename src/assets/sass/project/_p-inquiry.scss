@@ -42,9 +42,26 @@ inline-size: rm(350);
 background: #F56E28;
 border-radius: 100vmax;
 display: inline-flex;
+color: #FAF3EB;
+transition:all 0.3s ease;
+
 svg {
     display: block;
     position: absolute;
+}
+@media (any-hover: hover) {
+  &:hover {
+    background: transparent;
+    .p-inquiry__button-text {
+        color: $color-rd;
+    }
+    .p-inquiry__button-subtext {
+        color: $color-rd;
+    }
+    svg {
+        color: $color-rd;
+    }
+  }
 }
 }
 
@@ -73,6 +90,7 @@ right: rm(28);
 }
 
 .p-inquiry__button-text-wrapper {
+color: #FAF3EB;
 display: flex;
 flex-direction: column;
 justify-content: center;

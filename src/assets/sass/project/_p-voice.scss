@@ -68,10 +68,20 @@ img {
 }
 
 .p-voice__item-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rm(20);
 color: #FAF3EB;
 text-align: center;
 font-size: rm(20);
 font-weight: 900;
+}
+
+.p-voice__item-heading-pipe {
+background: url(../img/voice-pipe.svg) no-repeat center center / cover;
+inline-size: rm(2);
+block-size: rm(20);
 }
 
 .p-voice__lead {

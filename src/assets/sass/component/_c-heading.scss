@@ -7,6 +7,9 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 gap: rm(10);
+@include mq('sp-down') {
+  gap: rm(7);
+}
 }
 
 .c-subtitle {
@@ -18,9 +21,17 @@ inline-size: fit-content;
 border-radius: 100vmax;
 background: #F56E28;
 padding: rm(6) rm(24) rm(3) rm(24);
+@include mq('sp-down') {
+  font-size: rm(12);
+  padding: rm(4) rm(17) rm(2) rm(17);
+}
 }
 
 .c-title {
     font-size: rm(35);
 font-weight: 900;
+@include mq('sp-down') {
+  font-size: rm(20);
+  text-align: center;
+}
 }

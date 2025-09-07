@@ -40,6 +40,12 @@ justify-content: center;
     font-family: $font-sub;
     font-size: rm(15);
     font-weight: 400;
+    transition: color 0.3s ease;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #005DA2;
+      }
+    }
 }
 
 .l-header__cta {
@@ -58,12 +64,22 @@ justify-content: center;
     border-radius: rm(5);
     background: #005DA2;
     padding: rm(14) rm(29.36) rm(19) rm(42);
+    transition: all 0.3s ease;
 
     svg {
         position: relative;
         inset-block-start: rm(2);
         inline-size: rm(13);
         block-size: rm(13);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color:#005DA2;
+        background-color: transparent;
+
+
+      }
     }
 }
 

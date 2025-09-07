@@ -162,19 +162,15 @@ const setUpAccordion = () => {
     const content = element.querySelector(".js-content");
 
     summary.addEventListener("click", (event) => {
-      // デフォルトの挙動を無効化
       event.preventDefault();
-
       if (element.classList.contains(IS_OPENED_CLASS)) {
-        // 既に開かれている状態を閉じる
+        element.classList.remove(IS_OPENED_CLASS); // ←ここで即外す
         closingAnim(content, element)
           .eventCallback("onComplete", () => {
-            element.classList.remove(IS_OPENED_CLASS);
             element.removeAttribute("open");
           })
           .restart();
       } else {
-        // 開く処理
         element.classList.add(IS_OPENED_CLASS);
         element.setAttribute("open", "true");
         openingAnim(content).restart();
@@ -190,7 +186,7 @@ const closingAnim = (content, element) =>
   gsap.to(content, {
     height: 0,
     opacity: 0,
-    duration: 0.5,
+    duration: 0.3,
     ease: "power3.out",
     overwrite: true,
   });
@@ -208,8 +204,76 @@ const openingAnim = (content) =>
     {
       height: "auto",
       opacity: 1,
-      duration: 0.5,
+      duration: 0.3,
       ease: "power3.out",
       overwrite: true,
     }
   );
+
+window.addEventListener("load", () => {
+  const titles = document.querySelectorAll(".p-service__heading-title");
+  if (!titles.length) return;
+
+  // いったん高さリセット（リサイズ時用）
+  titles.forEach((el) => (el.style.height = ""));
+
+  // 最大値を取得
+  let maxHeight = 0;
+  titles.forEach((el) => {
+    maxHeight = Math.max(maxHeight, el.offsetHeight);
+  });
+
+  // 最大値でそろえる
+  titles.forEach((el) => {
+    el.style.height = maxHeight + "px";
+  });
+});
+
+// リサイズ時にも反映したい場合
+window.addEventListener("resize", () => {
+  const titles = document.querySelectorAll(".p-service__heading-title");
+  if (!titles.length) return;
+
+  titles.forEach((el) => (el.style.height = ""));
+  let maxHeight = 0;
+  titles.forEach((el) => {
+    maxHeight = Math.max(maxHeight, el.offsetHeight);
+  });
+  titles.forEach((el) => {
+    el.style.height = maxHeight + "px";
+  });
+});
+
+window.addEventListener("load", () => {
+  const titles = document.querySelectorAll(".p-service__lead");
+  if (!titles.length) return;
+
+  // いったん高さリセット（リサイズ時用）
+  titles.forEach((el) => (el.style.height = ""));
+
+  // 最大値を取得
+  let maxHeight = 0;
+  titles.forEach((el) => {
+    maxHeight = Math.max(maxHeight, el.offsetHeight);
+  });
+
+  // 最大値でそろえる
+  titles.forEach((el) => {
+    el.style.height = maxHeight + "px";
+  });
+});
+
+// リサイズ時にも反映したい場合
+window.addEventListener("resize", () => {
+  const titles = document.querySelectorAll(".p-service__lead");
+  if (!titles.length) return;
+
+  titles.forEach((el) => (el.style.height = ""));
+  let maxHeight = 0;
+  titles.forEach((el) => {
+    maxHeight = Math.max(maxHeight, el.offsetHeight);
+  });
+  titles.forEach((el) => {
+    el.style.height = maxHeight + "px";
+  });
+});

@@ -33,6 +33,7 @@ summary {
 inline-size: min(1366px, 100%);
 margin-inline: auto;
 padding-inline: rm(120);
+padding-block-start: rm(90);
 }
 
 .p-faq__heading {
@@ -44,35 +45,128 @@ padding-inline: rm(120);
 }
 
 .p-faq__list {
+    margin-block-start: rm(45);
 display: flex;
 flex-direction: column;
 gap: rm(10);
+}
+
+details[open] .p-faq__question-icon::after {
+  rotate: 90deg;
 }
 
 .js-details {
 
 }
 
+.js-summary {
+    position: relative;
+}
+
+.js-content {
+position: relative;
+}
+
 .p-faq__item {
 
 }
 
+// .p-faq__question--label {
+//     position: absolute;
+//     top: rm(30);
+//     left: rm(58);
+// color: #005DA2;
+// text-align: center;
+// font-family: "Alfa Slab One";
+// font-size: rm(30);
+// font-weight: 400;
+// line-height: 150%; /* 150% */
+// letter-spacing: 3px;
+// }
+
 .p-faq__question {
-    display: inline-block;
-font-size: rm(25);
-font-weight: 900;
+    position: relative;
+
+display: block;
 background-color: #fff;
 inline-size: 100%;
 border-radius: 100vmax;
 padding: rm(35) rm(197) rm(34) rm(198);
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    background: #005DA2;
+    // transition: all 0.3s ease;
+  }
+&::before {
+    right: 50px;
+    width: 25px;
+    height: 5px;
+  }
+  &::after {
+    right: 60px;
+    width: 5px;
+    height: 25px;
+    transition: rotate 0.3s ease;
+  }
+  @media(any-hover: hover) {
+    &:hover {
+      cursor: pointer;
+       &::before,
+        &::after {
+        background: $color-rd;
+    }
+    }
+  }
+}
+details[open] .p-faq__question::after {
+  rotate: 90deg;
+}
+
+.p-faq__question-text {
+font-size: rm(25);
+font-weight: 900;
 transition: opacity 0.3s ease;
+    &::before {
+      content: 'Q.';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left:rm(60);
+        color: #005DA2;
+font-family: "Alfa Slab One";
+font-size: rm(30);
+font-weight: 400;
+line-height: 150%; /* 150% */
+letter-spacing: 3px;
+    }
+
 }
 
 .p-faq__answer {
+}
+
+.p-faq__answer-text {
+    
     display: inline-block;
     font-size: rm(20);
     font-weight: 900;
-    line-height: 25px; /* 166.667% */
+    line-height: 166.667%; /* 166.667% */
     padding: rm(30) rm(80) rm(30) rm(156);
+    &::before {
+      position: absolute;
+        content:"A.";
+    top: rm(23);
+    left: rm(58);
+color: #F56E28;
+font-family: "Alfa Slab One";
+font-size: rm(30);
+font-weight: 400;
+line-height: 150%; /* 150% */
+letter-spacing: 3px;
+    }
 }
 

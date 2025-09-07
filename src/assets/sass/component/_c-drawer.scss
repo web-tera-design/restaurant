@@ -124,27 +124,39 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: $color-bk;
+    justify-content: center;
+    align-items: center;
     font-family: "Alfa Slab One";
     font-size: rm(15);
     font-weight: 400;
-    transition: all 0.3s ease;
     @media (any-hover: hover) {
-        &:hover {
-            opacity: .6;
+      &:hover {
+        .c-drawer__text {
+                      color: #005DA2;
         }
+      }
     }
-}
-
-.c-drawer__text {
 
 }
 
 .c-drawer__text {
+
+}
+
+.c-drawer__text {
+  inline-size: fit-content;
+  text-align: center;
     color: $color-wt;
     font-family: "Alfa Slab One";
     font-size: rm(15);
     font-weight: 400;
+        transition: all 0.3s ease;
+    @media (any-hover: hover) {
+        &:hover {
+            color: #005DA2;
+        }
+    }
+
 }
 
 .c-drawer__button {
@@ -174,10 +186,6 @@
           svg {
             color: #2c74b3;
           }
-          span {
-              color: #0B294C;
-          }
-  
           &::after {
             background: url(../img/button-entry-bk.svg) no-repeat center center / cover;
           }
@@ -221,6 +229,12 @@
     border-radius: rm(5);
     background: #005DA2;
     padding: rm(14) rm(29.36) rm(19) rm(42);
+    transition: background 0.3s ease;
+    @media (any-hover: hover) {
+      &:hover {
+        background: $color-rd;
+      }
+    }
 
     svg {
         position: relative;

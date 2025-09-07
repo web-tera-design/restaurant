@@ -9,6 +9,9 @@ background: #F56E28;
 padding: rm(67) rm(171) rm(94) rm(171);
 inline-size: min(1366px, 100%);
 margin-inline: auto;
+@include mq('sp-down') {
+    padding: rm(20);
+}
 }
 
 .p-results__heading {
@@ -19,12 +22,20 @@ text-align: center;
 color: #FAF3EB;
 font-size: rm(35);
 font-weight: 900;
+@include mq('sp-down') {
+  font-size: rm(24);
+}
 }
 
 .p-results__list {
 margin-block-start: rm(64);
 display: flex;
 gap: rm(8);
+@include mq('sp-down') {
+  margin-block-start: rm(45);
+  gap: rm(40);
+  flex-direction: column;
+}
 }
 
 .p-results__item {

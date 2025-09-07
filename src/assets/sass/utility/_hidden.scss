@@ -35,10 +35,10 @@
 //   }
 // }
 
-// .u-br--sm-down {
-//   display: none;
-//   @include mq(sm-down) {
-//     display: block;
-//   }
-// }
+.u-br--sm-down {
+  display: none;
+  @include mq(sp-down) {
+    display: block;
+  }
+}
 
