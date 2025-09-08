@@ -15,6 +15,8 @@
 .p-mv__image {
     inline-size: 100%;
     @include mq('tab-up') {
+      position: relative;
+      top: rm(-16);
       inline-size: rm(668);
     }
 
@@ -48,28 +50,34 @@
     padding: rm(6) rm(6) rm(6) rm(17);
 
     @include mq('sp-down') {
-      font-size: rm(14);
+      font-size: rm(12);
+      padding: rm(4.2) rm(4.2) rm(4.2) rm(10.2);
     }
 }
 
 .p-mv__title {
 display: inline-flex;
 flex-direction: column;
+@include mq('sp-down') {
+  inline-size: 100%;
+}
 }
 
 .p-mv__title-lead {
-    margin-block-start: 5px;
-    padding-inline: 15px;
+    margin-block-start: rm(5);
+    padding-inline: rm(15);
     inline-size: fit-content;
     background-color: $color-rd;
     color: $color-wt;
     font-size: rm(68);
     font-weight: 900;
-    line-height: 160.294%; /* 160.294% */
-    letter-spacing: -3.4px;
+    line-height: 150%; /* 160.294% */
+    letter-spacing: rm(-3.4);
 
     @include mq('sp-down') {
       font-size: rm(28);
+      padding-inline: rm(10.5);
+      letter-spacing: normal;
     }
 }
 
@@ -78,11 +86,12 @@ flex-direction: column;
     display: flex;
     flex-direction: column;
     gap: rm(5);
-    margin-block-start: rm(-90);
+    margin-block-start: rm(-80);
     inset-inline-start: rm(280);
     @include mq('sp-down') {
-      margin-block-start: revert;
-      inset-inline-start: revert;
+      margin-block-start: rm(-42);
+      margin-inline-start: rm(-175);
+      gap: rm(3);
     }
 }
 
@@ -91,7 +100,7 @@ flex-direction: column;
     font-size: rm(15);
     font-weight: 900;
     @include mq('sp-down') {
-      font-size: rm(12);
+      font-size: rm(8);
       padding-inline-start: rm(15);
     }
 
@@ -102,10 +111,10 @@ flex-direction: column;
       left: rm(-30);
       font-size: rm(40);
       @include mq('sp-down') {
-        font-size: rm(28);
-        top: 50%;
+        font-size: rm(24);
+        top: 40%;
         transform: translateY(-50%);
-        left: rm(-10);
+        left: rm(-4);
       }
     }
 }
@@ -118,7 +127,7 @@ flex-direction: column;
     align-items: center;
     gap: rm(9);
     @include mq('sp-down') {
-      margin-block-start: rm(35);
+      margin-block-start: rm(20);
     }
 }
 

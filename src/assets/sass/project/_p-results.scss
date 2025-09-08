@@ -107,10 +107,16 @@ line-height: 200%; /* 200% */
 }
 
 .p-results__unit {
+  position: relative;
 color: #F56E28;
 font-family: "Alfa Slab One";
 font-size: rm(30);
 font-weight: 400;
-transform: translateY(0.6em);
+top: rm(20);
+
+@include mq('sp-down') {
+  font-size: rm(21);
+  top: rm(13);
+}
 }
 

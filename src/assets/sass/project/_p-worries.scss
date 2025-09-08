@@ -1,7 +1,7 @@
 @use "../global" as *;
 
 .p-worries {
-    padding-block: rm(120) rm(137);
+    padding-block: rm(100) rm(137);
     @include mq('sp-down') {
       padding-block: rm(84) rm(96);
     }
@@ -16,6 +16,7 @@
 }
 
 .p-worries__subtitle {
+
 color: #FAF3EB;
 background: #F56E28;
 inline-size: fit-content;
@@ -25,6 +26,7 @@ margin-inline: auto;
 font-family: "Alfa Slab One";
 font-size: rm(15);
 font-weight: 400;
+text-transform: uppercase;
 @include mq('sp-down') {
   font-size: rm(12);
   padding: rm(4) rm(13) rm(2) rm(14)
@@ -59,6 +61,7 @@ gap: rm(8);
 @include mq('sp-down') {
   margin-block-start: rm(48);
   flex-direction: column;
+  gap: rm(40);
 }
 }
 
@@ -162,9 +165,10 @@ margin-block-start: rm(22);
     display: flex;
     justify-content: center;
     align-items: center;
+    left: rm(10);
 font-size: rm(15);
 font-weight: 900;
-letter-spacing: 0.45px;
+// letter-spacing: 0.45px;
 @include mq('sp-down') {
   font-size: rm(12);
 }

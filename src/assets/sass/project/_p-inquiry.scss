@@ -14,12 +14,21 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+@include mq('sp-down') {
+  inline-size: 100%;
+  padding-inline: rm(20);
+  padding-block: rm(48) rm(41);
+  text-align: center;
+}
 }
 
 .p-inquiry__title {
 color: #FAF3EB;
 font-size: rm(35);
 font-weight: 900;
+@include mq('sp-down') {
+  font-size: rm(20);
+}
 }
 
 .p-inquiry__lead {
@@ -27,13 +36,21 @@ margin-block-start: rm(21);
 color: #FAF3EB;
 font-size: rm(15);
 font-weight: 900;
-line-height: 25px; /* 166.667% */
+line-height: 166.667%; /* 166.667% */
+@include mq('sp-down') {
+  margin-block-start: rm(14);
+  font-size: rm(12);
+}
 }
 
 .p-inquiry__buttons {
 display: inline-flex;
 gap: rm(10);
 margin-block-start: rm(53);
+@include mq('sp-down') {
+margin-block-start: rm(37);
+flex-direction: column;
+}
 }
 
 .p-inquiry__button {
@@ -44,6 +61,10 @@ border-radius: 100vmax;
 display: inline-flex;
 color: #FAF3EB;
 transition:all 0.3s ease;
+@include mq('sp-down') {
+  inline-size: 100%;
+
+}
 
 svg {
     display: block;
@@ -67,6 +88,9 @@ svg {
 
 .p-inquiry__button--button1 {
     padding: rm(18) rm(108) rm(14) rm(82);
+    @include mq('sp-down') {
+      padding: rm(12.6) rm(75.6) rm(9.8) rm(57.4);
+    }
 svg{
 top: rm(25);
 right: rm(34);
@@ -75,6 +99,9 @@ right: rm(34);
 
 .p-inquiry__button--button2 {
     padding: rm(16) rm(86) rm(19) rm(64);
+    @include mq('sp-down') {
+      padding: rm(11.2) rm(60.2) rm(13.3) rm(44.8);
+    }
 svg{
 top: rm(24);
 right: rm(25);
@@ -83,6 +110,9 @@ right: rm(25);
 
 .p-inquiry__button--button3 {
     padding: rm(16) rm(95) rm(19) rm(95);
+    @include mq('sp-down') {
+      padding: rm(11.2) rm(66.5) rm(13.3) rm(66.5);
+    }
 svg{
 top: rm(21);
 right: rm(28);
@@ -102,6 +132,9 @@ gap: rm(6);
 color: #FAF3EB;
 font-size: rm(20);
 font-weight: 900;
+@include mq('sp-down') {
+  font-size: rm(14);
+}
 }
 
 .p-inquiry__button-subtext {
@@ -109,6 +142,9 @@ color: #FAF3EB;
 font-family: "Alfa Slab One";
 font-size: rm(13);
 font-weight: 400;
+@include mq('sp-down') {
+  font-size: rm(9);
+}
 }
 
 .p-inquiry__button-subtext--noto {
@@ -116,6 +152,9 @@ color: #FAF3EB;
 font-family: $font-main;
 font-size: rm(13);
 font-weight: 900;
+@include mq('sp-down') {
+  font-size: rm(9);
+}
 }
 
 .p-inquiry__notes {
@@ -124,12 +163,18 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+@include mq('sp-down') {
+  margin-block-start: rm(28.7);
+}
 }
 
 .p-inquiry__note-title {
 color: #FAF3EB;
 font-size: rm(20);
 font-weight: 900;
+@include mq('sp-down') {
+  font-size: rm(14);
+}
 }
 
 .p-inquiry__note-text {
@@ -137,5 +182,9 @@ margin-block-start: rm(10);
 color: #FAF3EB;
 font-size: rm(15);
 font-weight: 900;
+@include mq('sp-down') {
+  margin-block-start: rm(7);
+  font-size: rm(12);
+}
 }
 

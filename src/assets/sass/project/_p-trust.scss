@@ -8,6 +8,11 @@
 padding-inline: rm(121);
 padding-block: rm(100) rm(105);
 margin-inline: auto;
+@include mq('sp-down') {
+  inline-size: 100%;
+  padding-inline: rm(20);
+  padding-block: rm(70) rm(73.5);
+}
 }
 
 .p-trust__title {
@@ -18,9 +23,11 @@ margin-inline: auto;
 .p-trust__title span{
     position: relative;
     text-align: center;
-
     font-size: rm(35);
-font-weight: 900;
+    font-weight: 900;
+    @include mq('sp-down') {
+      font-size: rm(18);
+    }
 &::before {
   content: '';
   position: absolute;
@@ -29,6 +36,12 @@ font-weight: 900;
   inline-size: rm(13);
   block-size: rm(27.22);
   background: url(../img/inquiry-left.svg) no-repeat center center / cover;
+  @include mq('sp-down') {
+    inline-size: rm(9.1);
+    block-size: rm(19);
+    top: rm(5);
+    left: rm(-32);
+  }
 }
 
 &::after {
@@ -39,6 +52,12 @@ font-weight: 900;
   inline-size: rm(13);
   block-size: rm(27.22);
   background: url(../img/inquiry-right.svg) no-repeat center center / cover;
+  @include mq('sp-down') {
+        inline-size: rm(9.1);
+    block-size: rm(19);
+    top: rm(5);
+    right: rm(-26);
+  }
 }
 }
 
@@ -49,11 +68,18 @@ grid-template-columns: repeat(3, 1fr);
 grid-template-rows: auto auto;
 gap: rm(10);
 text-align: center;
+@include mq('sp-down') {
+  margin-block-start: rm(21.7);
+  grid-template-columns: 1fr;
+}
 }
 
 .p-trust__item {
     inline-size: rm(368);
     background-color: #fff;
+    @include mq('sp-down') {
+      inline-size: 100%;
+    }
 }
 
 .trust--1 {
@@ -66,6 +92,10 @@ text-align: center;
     padding-block: rm(21);
     font-size: rm(20);
 font-weight: 900;
+@include mq('sp-down') {
+  padding-block: rm(14.7);
+  font-size: rm(14);
+}
 &::before {
     position: absolute;
     content:"";
@@ -74,6 +104,12 @@ font-weight: 900;
     inline-size: rm(16);
     block-size: rm(16);
     background: url(../img/trust-label.svg) no-repeat center center / cover;
+    @include mq('sp-down') {
+      inline-size: rm(11.2);
+      block-size: rm(11.2);
+      top: rm(19.6);
+      left: rm(-16.8);
+    }
 }
 }
 

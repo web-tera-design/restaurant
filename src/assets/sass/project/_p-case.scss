@@ -26,7 +26,7 @@ font-weight: 900;
 
 .p-case__list {
 inline-size: 100%;
-margin-block-start: rm(63);
+margin-block-start: rm(56);
 display: flex;
 flex-direction: column;
 gap: rm(60);
@@ -116,7 +116,7 @@ line-height: 200%; /* 200% */
 }
 
 .p-case__before {
-    margin-block-start: rm(43);
+    margin-block-start: rm(50);
     margin-inline-start: rm(55);
 inline-size: rm(250);
 @include mq('sp-down') {
@@ -181,8 +181,8 @@ line-height: 175%; /* 175% */
 }
 
 .p-case__arrow {
-margin-inline-start: rm(47);
-margin-block-start: rm(93);
+margin-inline-start: rm(38);
+margin-block-start: rm(96);
 @include mq('sp-down') {
   margin-inline-start: revert;
   margin-block-start: revert;
@@ -227,7 +227,7 @@ margin-block-start: rm(93);
 }
 
 .p-case__after {
-    margin-block-start: rm(38);
+    margin-block-start: rm(48);
 inline-size: rm(275);
 margin-inline-start: rm(52);
 @include mq('sp-down') {
@@ -259,7 +259,7 @@ line-height: 166.667%; /* 166.667% */
 }
 
 .p-case__after-list {
-margin-block-start: rm(19);
+margin-block-start: rm(22);
 @include mq('sp-down') {
   margin-block-start: rm(13);
 }

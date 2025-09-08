@@ -34,6 +34,12 @@ inline-size: min(1366px, 100%);
 margin-inline: auto;
 padding-inline: rm(120);
 padding-block-start: rm(90);
+
+@include mq('sp-down') {
+  inline-size: 100%;
+  padding-inline: rm(20);
+  padding-block-start: rm(63);
+}
 }
 
 .p-faq__heading {
@@ -49,6 +55,9 @@ padding-block-start: rm(90);
 display: flex;
 flex-direction: column;
 gap: rm(10);
+@include mq('sp-down') {
+  margin-block-start: rm(31);
+}
 }
 
 details[open] .p-faq__question-icon::after {
@@ -71,19 +80,6 @@ position: relative;
 
 }
 
-// .p-faq__question--label {
-//     position: absolute;
-//     top: rm(30);
-//     left: rm(58);
-// color: #005DA2;
-// text-align: center;
-// font-family: "Alfa Slab One";
-// font-size: rm(30);
-// font-weight: 400;
-// line-height: 150%; /* 150% */
-// letter-spacing: 3px;
-// }
-
 .p-faq__question {
     position: relative;
 
@@ -92,6 +88,9 @@ background-color: #fff;
 inline-size: 100%;
 border-radius: 100vmax;
 padding: rm(35) rm(197) rm(34) rm(198);
+@include mq('sp-down') {
+  padding: rm(10) rm(30);
+}
   &::before,
   &::after {
     content: '';
@@ -102,15 +101,25 @@ padding: rm(35) rm(197) rm(34) rm(198);
     // transition: all 0.3s ease;
   }
 &::before {
-    right: 50px;
-    width: 25px;
-    height: 5px;
+    right: rm(50);
+    width: rm(25);
+    height: rm(5);
+    @include mq('sp-down') {
+      inset-inline-end: rm(10);
+      inline-size: rm(12);
+      block-size: rm(3);
+    }
   }
   &::after {
-    right: 60px;
-    width: 5px;
-    height: 25px;
+    right: rm(60);
+    width: rm(5);
+    height: rm(25);
     transition: rotate 0.3s ease;
+    @include mq('sp-down') {
+      inset-inline-end: rm(15);
+      inline-size: rm(3);
+      block-size: rm(12);
+    }
   }
   @media(any-hover: hover) {
     &:hover {
@@ -130,6 +139,9 @@ details[open] .p-faq__question::after {
 font-size: rm(25);
 font-weight: 900;
 transition: opacity 0.3s ease;
+@include mq('sp-down') {
+  font-size: rm(14);
+}
     &::before {
       content: 'Q.';
       position: absolute;
@@ -137,11 +149,16 @@ transition: opacity 0.3s ease;
       transform: translateY(-50%);
       left:rm(60);
         color: #005DA2;
-font-family: "Alfa Slab One";
-font-size: rm(30);
-font-weight: 400;
-line-height: 150%; /* 150% */
-letter-spacing: 3px;
+      font-family: "Alfa Slab One";
+      font-size: rm(30);
+      font-weight: 400;
+      line-height: 150%; /* 150% */
+      letter-spacing: rm(3);
+
+      @include mq('sp-down') {
+        font-size: rm(17);
+        left: rm(5);
+      }
     }
 
 }
@@ -156,17 +173,26 @@ letter-spacing: 3px;
     font-weight: 900;
     line-height: 166.667%; /* 166.667% */
     padding: rm(30) rm(80) rm(30) rm(156);
+    @include mq('sp-down') {
+      font-size: rm(12);
+      padding: rm(20) rm(30);
+    }
     &::before {
       position: absolute;
         content:"A.";
-    top: rm(23);
-    left: rm(58);
-color: #F56E28;
-font-family: "Alfa Slab One";
-font-size: rm(30);
-font-weight: 400;
-line-height: 150%; /* 150% */
-letter-spacing: 3px;
+      top: rm(23);
+      left: rm(58);
+      color: #F56E28;
+      font-family: "Alfa Slab One";
+      font-size: rm(30);
+      font-weight: 400;
+      line-height: 150%; /* 150% */
+      letter-spacing: rm(3);
+      @include mq('sp-down') {
+        font-size: rm(20);
+        top: rm(15);
+        left: rm(5);
+      }
     }
 }
 

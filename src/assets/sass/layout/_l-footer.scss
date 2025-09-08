@@ -7,12 +7,20 @@
 .l-footer__inner {
 padding: rm(67) rm(120) rm(16) rm(74);
 background-color: #005DA2;
+@include mq('sp-down') {
+  padding: rm(46.9) rm(20) rm(11.2) rm(20)
+}
 }
 
 .l-footer__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include mq('sp-down') {
+      flex-direction: column;
+      justify-content: revert;
+      align-items: revert;
+    }
 }
 
 .l-footer-company {
@@ -23,16 +31,26 @@ background-color: #005DA2;
 color: #FAF3EB;
 font-size: rm(20);
 font-weight: 900;
+@include mq('sp-down') {
+  font-size: rm(12);
+}
 }
 
 .l-footer-company__meta {
 margin-block-start: rm(16);
+@include mq('sp-down') {
+  margin-block-start: rm(11.2);
+}
 }
 
 .l-footer-company__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: rm(10) rm(49);
+    @include mq('sp-down') {
+      grid-template-columns: 1fr;
+      gap: rm(10);
+    }
 
 }
 
@@ -41,6 +59,9 @@ margin-block-start: rm(16);
 color: #FAF3EB;
 font-size: rm(13);
 font-weight: 900;
+@include mq('sp-down') {
+  font-size: rm(9.1);
+}
 }
 
 .l-footer-company__term {
@@ -52,12 +73,17 @@ font-weight: 900;
 }
 
 .l-footer-nav {
-
+@include mq('sp-down') {
+  margin-block-start: rm(20);
+}
 }
 
 .l-footer-nav__primary {
 display: flex;
 gap: rm(40);
+@include mq('sp-down') {
+  gap: rm(10);
+}
 }
 
 .l-footer__primary-link {
@@ -77,6 +103,10 @@ transition: color 0.3s ease;
     margin-block-start: rm(27);
 display: flex;
 gap: rm(40);
+@include mq('sp-down') {
+  margin-block-start: 0;
+  gap: rm(10);
+}
 }
 
 .l-footer__legal-link {
@@ -84,6 +114,9 @@ color: #FAF3EB;
 font-size: rm(11);
 font-weight: 900;
 transition: color 0.3s ease;
+@include mq('sp-down') {
+  font-size: rm(7.7);
+}
 @media (any-hover: hover) {
   &:hover {
     color: $color-rd;
@@ -94,11 +127,17 @@ transition: color 0.3s ease;
 .l-footer__copy {
     text-align: center;
 margin-block-start: rm(43);
+@include mq('sp-down') {
+  margin-block-start: rm(20);
+}
 }
 
 .l-footer__copy-right {
 color: #FAF3EB;
 font-size: rm(10);
 font-weight: 900;
+@include mq('sp-down') {
+  font-size: rm(7);
+}
 }
 

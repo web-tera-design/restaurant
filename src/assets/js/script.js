@@ -118,6 +118,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("load", () => {
+  // 768px以下なら処理しない
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    document.querySelectorAll(".p-voice__lead").forEach((el) => {
+      el.style.height = ""; // リセットして自然な高さに戻す
+    });
+    return;
+  }
   const leads = document.querySelectorAll(".p-voice__lead");
   if (!leads.length) return;
 
@@ -277,3 +284,16 @@ window.addEventListener("resize", () => {
     el.style.height = maxHeight + "px";
   });
 });
+
+function adjustMvMargin() {
+  const header = document.querySelector(".l-header");
+  const mv = document.querySelector(".p-mv");
+  if (!header || !mv) return;
+
+  mv.style.marginTop = header.offsetHeight + "px";
+}
+
+// ページロード時
+window.addEventListener("load", adjustMvMargin);
+// リサイズ時
+window.addEventListener("resize", adjustMvMargin);

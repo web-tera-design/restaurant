@@ -41,7 +41,7 @@ padding: rm(64) rm(38) rm(45) rm(55);
 position: relative;
 @include mq('sp-down') {
   inline-size: 100%;
-  padding: rm(20);
+  padding: rm(20) rm(10);
 }
 }
 
@@ -54,12 +54,14 @@ background: rgba(0, 93, 162, 0.10);
 }
 
 .p-point__label {
+  display: inline-block;
+  text-align: center;
     position: absolute;
     top: rm(-20);
     left: 50%;
     translate: -50%;
-    inline-size: fit-content;
-    padding: rm(8) rm(42);
+    inline-size: rm(245);
+    padding: rm(8) rm(40);
 color: #FAF3EB;
 font-size: rm(18);
 font-weight: 900;
@@ -71,9 +73,12 @@ background: #F56E28;
   font-size: rm(12);
   top: rm(-14);
 }
-
 }
 
+.--label-blue {
+  background: #005da2;
+
+}
 .p-point__card-list {
 display: flex;
 flex-direction: column;
@@ -86,30 +91,39 @@ gap: rm(20);
 .p-point__card-item {
     display: flex;
     gap: rm(17);
-color: #000;
-font-size: rm(18);
-font-weight: 900;
+
 @include mq('sp-down') {
   gap: rm(12);
-  font-size: rm(12);
 }
 }
 
 .p-point__card-label {
     position: relative;
+    flex: 0 0 rm(20);
     top: rm(4);
 background: url(../img/point-rd.svg) no-repeat center center / cover;
 inline-size: rm(20);
 block-size: rm(20);
 @include mq('sp-down') {
+  flex: 0 0 rm(10);
   inline-size: rm(10);
   block-size: rm(10);
   top: rm(3);
+  left: rm(10);
 }
 }
 
+.--card-label-blue {
+  background: url(../img/point-label-blue.svg) no-repeat center center / cover;
+}
 
 .p-point__card-text {
-
+color: #000;
+font-size: rm(18);
+font-weight: 900;
+@include mq('sp-down') {
+  font-size: rm(10);
+  
+}
 }
 

@@ -1,7 +1,10 @@
 @use "../global" as *;
 
 .p-service {
-padding-block: rm(154) rm(121);
+padding-block: rm(154) rm(118);
+@include mq('sp-down') {
+  padding-block: rm(107.8) rm(82.6);
+}
 }
 
 .p-service__inner {
@@ -31,7 +34,7 @@ gap: rm(8);
 
 .p-service__item {
     inline-size: rm(370);
-    padding: rm(38) rm(23) rm(24) rm(23);
+    padding: rm(38) rm(25) rm(24) rm(25);
     position: relative;
 background: #005DA2;
 
@@ -70,7 +73,8 @@ text-align: center;
     line-height: 200%; /* 200% */
     border-radius: rm(5);
     background: #FAF3EB;
-    padding: rm(5) rm(35);
+    display: inline-block;
+    inline-size: rm(130);
     @include mq('sp-down') {
       font-size: rm(12);
         padding: rm(5) rm(24);
@@ -161,7 +165,7 @@ line-height: 200%; /* 200% */
 }
 
 .p-service__lead-heading {
-margin-block-start: rm(23);
+margin-block-start: rm(20);
 @include mq('sp-down') {
   margin-block-start: rm(16);
 }

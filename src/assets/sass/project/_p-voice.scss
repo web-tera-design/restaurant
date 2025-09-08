@@ -146,7 +146,7 @@ background-color: $color-rd;
 padding-block: rm(8);
 text-align: center;
 @include mq('sp-down') {
-  font-size: rm(9);
+  font-size: rm(8);
   padding-block: rm(5);
 }
 }
