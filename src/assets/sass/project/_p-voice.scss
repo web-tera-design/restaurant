@@ -8,7 +8,7 @@
 position: relative;
 inline-size: min(1366px, 100%);
 padding-inline: rm(50);
-padding-block-start: rm(123);
+padding-block-start: rm(140);
 margin-inline: auto;
 @include mq('sp-down') {
   padding-inline: rm(20);
@@ -132,6 +132,7 @@ display: flex;
 gap: rm(5);
 justify-content: center;
 align-items: center;
+margin-block-start: rm(20);
 @include mq('sp-down') {
   margin-block-start: rm(10);
 }

@@ -25,7 +25,7 @@ border-radius: rm(10);
 color: #FAF3EB;
 font-size: rm(35);
 font-weight: 900;
-letter-spacing: 1.05px;
+// letter-spacing: 1.05px;
 @include mq('sp-down') {
   font-size: rm(20);
 }
@@ -59,7 +59,6 @@ margin-inline: auto;
 color: #FAF3EB;
 font-size: rm(25);
 font-weight: 900;
-letter-spacing: 1.25px;
 margin-block-end: rm(13);
 
 @include mq('sp-down') {
@@ -126,6 +125,7 @@ inline-size: rm(665);
       padding: rm(11) rm(20) rm(11) rm(30);
       gap: rm(10);
       font-size: rm(12);
+      inline-size: 100%;
     }
 
     svg {
@@ -135,12 +135,15 @@ inline-size: rm(665);
         top: rm(4);
         left: rm(23);
         @include mq('sp-down') {
-            inline-size: rm(12);
-            block-size: rm(12);
+            inline-size: rm(10);
+            block-size: rm(10);
+            top: rm(2);
+            left: rm(15);
         }
     }
     @media (any-hover: hover) {
       &:hover {
+        box-shadow: 0 rm(2) rm(4) rgba(0, 0, 0, 0.1);
         background: $color-rd;
         color:#005DA2;
         .p-cta__text {
@@ -161,6 +164,9 @@ inline-size: rm(665);
     svg {
       position: relative;
       left: rm(100);
+      @include mq('sp-down') {
+        left: rm(23);
+      }
     }
     @include mq('sp-down') {
       inline-size: 100%;
@@ -170,6 +176,21 @@ inline-size: rm(665);
         background:#005DA2;
       }
     }
+}
+
+.p-cta__button--second {
+  inline-size: rm(773);
+  padding-block: rm(14) rm(21);
+  @include mq('sp-down') {
+    inline-size: 100%;
+  }
+  svg {
+    top: 0;
+    left: rm(60);
+    @include mq('sp-down') {
+      left: 0;
+    }
+  }
 }
 
 .p-cta__button-text-wrapper {
@@ -209,13 +230,13 @@ font-weight: 900;
 .p-cta__subtext {
     display: block;
     margin-block-start: rm(11);
-color: #FAF3EB;
-font-size: rm(16);
-font-weight: 700;
-@include mq('sp-down') {
-  margin-block-start: rm(5);
-  font-size: rm(8);
-}
+    color: #FAF3EB;
+    font-size: rm(16);
+    font-weight: 700;
+    @include mq('sp-down') {
+      margin-block-start: rm(5);
+      font-size: rm(8);
+    }
 }
 
 
@@ -230,6 +251,7 @@ font-weight: 700;
 
 .p-cta__inner--second {
     padding-block-start: rm(80);
+    padding-block-end: rm(58);
     @include mq('sp-down') {
       padding-block-start: rm(56);
     }
@@ -252,11 +274,11 @@ font-weight: 700;
     position: absolute;
     z-index: 2;
     background: url(../img/cta-polygon.svg) no-repeat center center / cover;
-    top: rm(-60);
+    top: rm(-52);
     left: 50%;
     translate: -50%;
-    inline-size: rm(110);
-    block-size: rm(110);
+    inline-size: rm(100);
+    block-size: rm(100);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -271,4 +293,9 @@ font-weight: 700;
         block-size: 100%;
         aspect-ratio: 1;
     }
+}
+
+
+.--heading-third {
+  margin-block-start: rm(120);
 }

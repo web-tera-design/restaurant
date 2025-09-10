@@ -2,6 +2,7 @@
 
 .p-case {
 background: #005DA2;
+// scroll-padding-top: 500px;
 }
 
 .p-case__card-wrapper {
@@ -93,8 +94,11 @@ gap: rm(60);
     inline-size: rm(160);
     margin-inline: auto;
     @include mq('sp-down') {
+      inline-size: rm(112);
     }
     img {
+      inline-size: 100%;
+      block-size: 100%;
         display: block;
     }
 }
@@ -259,9 +263,11 @@ line-height: 166.667%; /* 166.667% */
 }
 
 .p-case__after-list {
+  inline-size: rm(295);
 margin-block-start: rm(22);
 @include mq('sp-down') {
   margin-block-start: rm(13);
+  inline-size: revert;
 }
 }
 
@@ -284,7 +290,7 @@ line-height: 175%; /* 175% */
   color:$color-rd;
   @include mq('sp-down') {
 
-    left: rm(-11);
+    left: rm(-16);
     font-size: rm(35);
   }
 }

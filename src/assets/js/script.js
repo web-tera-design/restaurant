@@ -163,6 +163,10 @@ document.addEventListener("DOMContentLoaded", () => {
 const setUpAccordion = () => {
   const details = document.querySelectorAll(".js-details");
   const IS_OPENED_CLASS = "is-opened";
+  const last = details[details.length - 1];
+  last.classList.add(IS_OPENED_CLASS);
+  last.setAttribute("open", "true");
+  // openingAnim(last.querySelector(".js-content")).restart(); // 初回にアニメつけたいなら
 
   details.forEach((element) => {
     const summary = element.querySelector(".js-summary");

@@ -95,6 +95,7 @@ padding: rm(10) rm(16) rm(9) rm(16);
 background-color: #005da2;
 border-radius: 100vmax;
 @include mq('sp-down') {
+  top: rm(-14);
   font-size: rm(12);
   padding: rm(7) rm(11) rm(6) rm(11);
 }

@@ -41,7 +41,7 @@ padding: rm(64) rm(38) rm(45) rm(55);
 position: relative;
 @include mq('sp-down') {
   inline-size: 100%;
-  padding: rm(20) rm(10);
+  padding: rm(32) rm(10);
 }
 }
 

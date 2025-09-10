@@ -34,7 +34,7 @@ gap: rm(8);
 
 .p-service__item {
     inline-size: rm(370);
-    padding: rm(38) rm(25) rm(24) rm(25);
+    padding: rm(38) rm(23) rm(24) rm(23);
     position: relative;
 background: #005DA2;
 
@@ -53,10 +53,16 @@ color: #FAF3EB;
 font-family: "Alfa Slab One";
 font-size: rm(15);
 font-weight: 400;
-padding: rm(10) rm(16);
+inline-size: rm(40);
+aspect-ratio: 1;
 background-color: $color-rd;
 border-radius: 100vmax;
+display: flex;
+justify-content: center;
+align-items: center;
 @include mq('sp-down') {
+  inline-size: rm(28);
+  top: rm(-14);
   font-size: rm(12);
   padding: rm(7) rm(11);
 }
@@ -178,14 +184,17 @@ font-size: rm(15);
 font-weight: 900;
 line-height: 200%; /* 200% */
 inline-size: fit-content;
-background: url(../img/service-bg-image.webp) no-repeat center center / cover;
+background: url(../img/service-bg.webp) no-repeat center center / cover;
 @include mq('sp-down') {
+  text-align: center;
+  padding: rm(2) rm(23.1) rm(7.2) rm(15.4);
+  inline-size: rm(145);
     font-size: rm(12);
 }
 }
 
 .p-service__description-wrapper {
-background-color: #FAF3EB;
+background-color: #fff;
 border-radius: rm(10);
 margin-block-start: rm(-20);
 padding: rm(13) rm(20);

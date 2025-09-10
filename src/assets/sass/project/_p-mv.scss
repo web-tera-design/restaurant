@@ -82,13 +82,14 @@ flex-direction: column;
 }
 
 .p-mv__read-list {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: rm(5);
-    margin-block-start: rm(-80);
-    inset-inline-start: rm(280);
-    @include mq('sp-down') {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: rm(5);
+  margin-block-start: rm(-80);
+  inset-inline-start: rm(280);
+  @include mq('sp-down') {
+      inline-size: rm(180);
       margin-block-start: rm(-42);
       margin-inline-start: rm(-175);
       gap: rm(3);
@@ -99,6 +100,9 @@ flex-direction: column;
     position: relative;
     font-size: rm(15);
     font-weight: 900;
+    display: block;
+    inline-size: fit-content;
+
     @include mq('sp-down') {
       font-size: rm(8);
       padding-inline-start: rm(15);

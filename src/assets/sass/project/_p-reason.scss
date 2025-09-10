@@ -18,7 +18,7 @@ margin-inline: auto;
 padding-block: rm(60) rm(111);
 @include mq('sp-down') {
   inline-size: 100%;
-  padding-inline: rm(20);
+  padding-inline: rm(30);
   padding-block: rm(42) rm(77.7);
 }
 }
@@ -41,7 +41,7 @@ gap: rm(35) rm(54);
 @include mq('sp-down') {
   margin-block-start: rm(37.5);
   grid-template-columns: 1fr;
-  gap: rm(20);
+  gap: rm(30);
 }
 }
 
@@ -69,8 +69,8 @@ align-items: center;
 
 .p-reason__label {
     position: absolute;
-    top: rm(-24);
-    left: rm(-24);
+    top: rm(-14);
+    left: rm(-14);
 color: #F56E28;
 font-family: "Alfa Slab One";
 font-size: rm(18);

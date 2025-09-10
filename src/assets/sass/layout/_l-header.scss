@@ -1,13 +1,14 @@
 @use "../global" as *;
 
 .l-header {
-    inline-size: min(1366px, 100%);
+    // inline-size: min(1366px, 100%);
     margin-inline: auto;
     position: fixed;
     top: 0;
     left: 50%;
     translate: -50%;
     z-index: 100;
+    box-shadow: 0 rm(3) rm(6) rgba(0, 0, 0, 0.1);
 }
 
 .l-header__inner {
@@ -16,6 +17,7 @@
     justify-content: space-between;
     padding-inline: rm(50);
     background-color: $color-rd;
+    padding-block: rm(10);
 }
 
 .l-header__logo {

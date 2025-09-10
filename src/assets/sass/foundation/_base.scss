@@ -23,11 +23,15 @@ html, body {
 html {
   @media screen and (max-width: #{px($pc-inner-sum) - 1px}) and (min-width: #{px($breakpoint)}) {
     font-size: calc(16 / #{$pc-inner-sum} * 100vw); 
+
   }
   @media screen and (max-width: #{px($breakpoint) - 1px}) {
     font-size: calc(16 / #{$sp_camp} * 100vw);
+    // font-size: min(calc(16 / #{$sp_camp} * 100vw), xxpx);
+    // スマホカンプデカすぎ問題を防ぐ
   }
 }
+
 
 .l-body {
   min-height: 100vh;

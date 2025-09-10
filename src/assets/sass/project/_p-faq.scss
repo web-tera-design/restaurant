@@ -82,14 +82,14 @@ position: relative;
 
 .p-faq__question {
     position: relative;
-
+  text-align: center;
 display: block;
 background-color: #fff;
 inline-size: 100%;
 border-radius: 100vmax;
 padding: rm(35) rm(197) rm(34) rm(198);
 @include mq('sp-down') {
-  padding: rm(10) rm(30);
+  padding: rm(10) rm(40);
 }
   &::before,
   &::after {
@@ -140,7 +140,7 @@ font-size: rm(25);
 font-weight: 900;
 transition: opacity 0.3s ease;
 @include mq('sp-down') {
-  font-size: rm(14);
+  font-size: rm(10);
 }
     &::before {
       content: 'Q.';
@@ -157,7 +157,7 @@ transition: opacity 0.3s ease;
 
       @include mq('sp-down') {
         font-size: rm(17);
-        left: rm(5);
+        left: rm(15);
       }
     }
 
@@ -174,8 +174,8 @@ transition: opacity 0.3s ease;
     line-height: 166.667%; /* 166.667% */
     padding: rm(30) rm(80) rm(30) rm(156);
     @include mq('sp-down') {
-      font-size: rm(12);
-      padding: rm(20) rm(30);
+      font-size: rm(10);
+      padding: rm(20) rm(40);
     }
     &::before {
       position: absolute;
@@ -189,9 +189,9 @@ transition: opacity 0.3s ease;
       line-height: 150%; /* 150% */
       letter-spacing: rm(3);
       @include mq('sp-down') {
-        font-size: rm(20);
+        font-size: rm(17);
         top: rm(15);
-        left: rm(5);
+        left: rm(15);
       }
     }
 }
