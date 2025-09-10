@@ -7,8 +7,8 @@
 .p-mv__inner {
     display: flex;
     flex-direction: row-reverse;
+    flex-direction: column;
     @include mq('sp-down') {
-      flex-direction: column;
     }
 }
 
@@ -17,7 +17,7 @@
     @include mq('tab-up') {
       position: relative;
       top: rm(-16);
-      inline-size: rm(668);
+      // inline-size: rm(668);
     }
 
     img {
@@ -28,6 +28,10 @@
 }
 
 .p-mv__content {
+  position: relative;
+  top: rm(-1100);
+  left:rm(700);
+
     margin-block-start: rm(27);
     @include mq('sp-down') {
       margin-block-start: rm(18);
