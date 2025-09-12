@@ -6,6 +6,7 @@
 
 .l-footer__inner {
 padding: rm(67) rm(120) rm(16) rm(74);
+padding-inline: rm(20);
 background-color: #005DA2;
 @include mq('sp-down') {
   padding: rm(46.9) rm(20) rm(11.2) rm(20)
@@ -16,6 +17,11 @@ background-color: #005DA2;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    inline-size: rm(1068);
+    margin-inline: auto;
+    // padding-inline: rm(20);
+    // 概要縦並びVer
+
     @include mq('sp-down') {
       flex-direction: column;
       justify-content: revert;
@@ -49,7 +55,8 @@ margin-block-start: rm(16);
 
 .l-footer-company__list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    // grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: rm(10) rm(49);
     // @include mq('tab-down') {
     //   row-gap: rm(10);
@@ -91,6 +98,19 @@ font-weight: 900;
   left: 0px;
   font-size: inherit;
 }
+}
+
+.--desc-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.l-footer__desc1 {
+
+}
+
+.l-footer__desc2 {
+
 }
 
 .l-footer-nav {
@@ -143,6 +163,9 @@ transition: color 0.3s ease;
 .l-footer-nav__legal {
     margin-block-start: rm(27);
 display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 gap: rm(40);
 @include mq('tab-down') {
   margin-block-start: 0;
@@ -174,8 +197,10 @@ transition: color 0.3s ease;
 }
 
 .l-footer__copy {
+
     text-align: center;
     position: relative;
+    // bottom: 20px;
     left: rm(20);
 margin-block-start: rm(40);
 @include mq('sp-down') {

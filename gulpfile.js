@@ -152,7 +152,10 @@ function watchFiles() {
   );
   // // 🔥 HTMLファイルの更新を検知して「手動で」browserSync.reload
   gulp.watch("./**/*.html").on("change", browserSync.reload);
-
+  // ここでPHPファイルの監視を追加
+  gulp.watch("./src/**/*.php").on("change", () => {
+    gulp.series(copyPhp, reloadBrowser)();
+  });
   // dist内HTML変更監視を追加
   gulp.watch("./dist/**/*.html").on("change", browserSync.reload);
 }
@@ -199,6 +202,10 @@ function copyImage() {
     .pipe(gulp.dest("./dist/assets/img/"));
 }
 
+function copyPhp() {
+  return gulp.src(["./src/*.php"]).pipe(gulp.dest("./dist"));
+}
+
 // ===============================================
 // # Gulpタスク登録
 // ===============================================
@@ -206,7 +213,7 @@ exports.generateIndexScssTask = generateIndexScss;
 exports.compileSassTask = compileSass;
 exports.formatJSTask = formatJS;
 exports.beautifyHtmlTask = beautifyHtml;
-exports.dev = gulp.series(gulp.parallel(formatJS, compileSass, copyImage, convertToWebp, beautifyHtml), browserInit, watchFiles);
-exports.build = gulp.series(gulp.parallel(formatJS, compileSass, copyImage, convertToWebp, beautifyHtml));
+exports.dev = gulp.series(gulp.parallel(formatJS, compileSass, copyImage, copyPhp, convertToWebp, beautifyHtml), browserInit, watchFiles);
+exports.build = gulp.series(gulp.parallel(formatJS, compileSass, copyImage, copyPhp, convertToWebp, beautifyHtml));
 exports.injectGlobalUse = injectGlobalUseToPartials;
 exports.convertToWebp = convertToWebp;
